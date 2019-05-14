@@ -8,27 +8,27 @@ typedef struct student{
 	struct student *next; 
 }STU;
 
-void link_print(STU *head)//ÑÏ¸ñÒâÒåÉÏ½² headÊÇÕâ¸öº¯ÊıµÄ¾Ö²¿±äÁ¿
+void link_print(STU *head)//ä¸¥æ ¼æ„ä¹‰ä¸Šè®² headæ˜¯è¿™ä¸ªå‡½æ•°çš„å±€éƒ¨å˜é‡
 {
-	//ÔÙ¶¨ÒåÒ»¸ö±äÁ¿
-	STU *pb = head;//¿ÉÒÔÈ¥µô
+	//å†å®šä¹‰ä¸€ä¸ªå˜é‡
+	STU *pb = head;//å¯ä»¥å»æ‰
 	while(pb != NULL)
-	{//ÒªÊä³öÈı¸ö½Úµã£¬´òÓ¡µÄ¶«Î÷ÊÇÒ»ÑùµÄ
+	{//è¦è¾“å‡ºä¸‰ä¸ªèŠ‚ç‚¹ï¼Œæ‰“å°çš„ä¸œè¥¿æ˜¯ä¸€æ ·çš„
 	
-		printf("%d %s\n",pb->num,pb->name);//´òÓ¡µÚÒ»¸ö
-		pb = pb->next;//ÈÃpbÖ¸ÏòpbÏÂÒ»¸ö½Úµã
+		printf("%d %s\n",pb->num,pb->name);//æ‰“å°ç¬¬ä¸€ä¸ª
+		pb = pb->next;//è®©pbæŒ‡å‘pbä¸‹ä¸€ä¸ªèŠ‚ç‚¹
 	}
 }
 
 main()
 {
 	STU *head,*pnew;
-	pnew = malloc(sizeof(STU));//¸³ÖµÔËËã·û×Ô¼º×ª
+	pnew = malloc(sizeof(STU));//èµ‹å€¼è¿ç®—ç¬¦è‡ªå·±è½¬
 	
-	head = pnew;//head¿ªÍ· ¾ÍºÍÊı×éµÄÊı×éÃû¿ªÍ·Ò»Ñù ÕÒµ½Á´±íµÄµÚÒ»¸ö³ÉÔ±
+	head = pnew;//headå¼€å¤´ å°±å’Œæ•°ç»„çš„æ•°ç»„åå¼€å¤´ä¸€æ · æ‰¾åˆ°é“¾è¡¨çš„ç¬¬ä¸€ä¸ªæˆå‘˜
 	head->num = 101;
 	strcpy(head->name,"lk");
-	//head->name = "lk";	´íµÄ
+	//head->name = "lk";	é”™çš„
 	//printf("%d %s\n",head->num,head->name);
 
 	pnew = malloc(sizeof(STU));
@@ -42,8 +42,8 @@ main()
 	head->next->next = pnew;
 	pnew->num = 103;
 	strcpy(pnew->name,"kp");
-	//printf("%d %s\n",pnew->num,pnew->name);//×îºóÖ¸ÏòNULL È·¶¨Á´±íĞ´Íê
+	//printf("%d %s\n",pnew->num,pnew->name);//æœ€åæŒ‡å‘NULL ç¡®å®šé“¾è¡¨å†™å®Œ
 	
-	link_print(head);//º¯Êı ²é¿´Á´±íµÄËùÓĞ½Úµã °ÑÍ·´«½øÈ¥ Á´±íµÄÊ×µØÖ·
+	link_print(head);//å‡½æ•° æŸ¥çœ‹é“¾è¡¨çš„æ‰€æœ‰èŠ‚ç‚¹ æŠŠå¤´ä¼ è¿›å» é“¾è¡¨çš„é¦–åœ°å€
 	return 0;
 }

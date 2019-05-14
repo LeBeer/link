@@ -10,12 +10,12 @@ typedef struct student{
 main()
 {
 	STU *head,*pnew;
-	pnew = malloc(sizeof(STU));//¸³ÖµÔËËã·û×Ô¼º×ª
+	pnew = malloc(sizeof(STU));//èµ‹å€¼è¿ç®—ç¬¦è‡ªå·±è½¬
 	
-	head = pnew;//head¿ªÍ· ¾ÍºÍÊý×éµÄÊý×éÃû¿ªÍ·Ò»Ñù ÕÒµ½Á´±íµÄµÚÒ»¸ö³ÉÔ±
+	head = pnew;//headå¼€å¤´ å°±å’Œæ•°ç»„çš„æ•°ç»„åå¼€å¤´ä¸€æ · æ‰¾åˆ°é“¾è¡¨çš„ç¬¬ä¸€ä¸ªæˆå‘˜
 	head->num = 101;
 	strcpy(head->name,"lk");
-	//head->name = "lk";	´íµÄ
+	//head->name = "lk";	é”™çš„
 	printf("%d %s\n",head->num,head->name);
 
 	pnew = malloc(sizeof(STU));

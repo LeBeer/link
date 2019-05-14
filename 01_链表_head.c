@@ -10,11 +10,11 @@ typedef struct student{
 main()
 {
 	STU *head;
-	head = malloc(sizeof(STU));//¸³ÖµÔËËã·û×Ô¼º×ª
+	head = malloc(sizeof(STU));//èµ‹å€¼è¿ç®—ç¬¦è‡ªå·±è½¬
 	
 	head->num = 101;
 	strcpy(head->name,"lk");
-	//head->name = "lk";	´íµÄ
+	//head->name = "lk";	é”™çš„
 
 	head->next = malloc(sizeof(STU));
 	head->next->num = 102;
